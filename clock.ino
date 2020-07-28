@@ -14,7 +14,7 @@ char daysOfTheWeek[7][12] = {"Domingo", "Segunda", "Terça", "Quarta", "Quinta",
 
 #define CTL_2A 6
 #define CTL_2B 7
-#define SEG_A A3
+#define SEG_A 13
 #define SEG_B 2
 #define SEG_C 5 
 #define SEG_D 3
