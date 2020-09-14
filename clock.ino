@@ -63,36 +63,19 @@ int dias[7][3][7] = {
                     };
 
 
-void printDebug(){
-    // Serial.print("Data: "); //IMPRIME O TEXTO NO MONITOR SERIAL
-    // Serial.print(now.day(), DEC); //IMPRIME NO MONITOR SERIAL O DIA
-    // Serial.print('/'); //IMPRIME O CARACTERE NO MONITOR SERIAL
-    // Serial.print(now.month(), DEC); //IMPRIME NO MONITOR SERIAL O MÊS
-    // Serial.print('/'); //IMPRIME O CARACTERE NO MONITOR SERIAL
-    // Serial.print(now.year(), DEC); //IMPRIME NO MONITOR SERIAL O ANO
-    // Serial.print(" / Dia: "); //IMPRIME O TEXTO NA SERIAL
-    // Serial.print(daysOfTheWeek[now.dayOfTheWeek()]); //IMPRIME NO MONITOR SERIAL O DIA
-    // Serial.print(" / Horas: "); //IMPRIME O TEXTO NA SERIAL
-    // Serial.print(now.hour(), DEC); //IMPRIME NO MONITOR SERIAL A HORA
-    // Serial.print(':'); //IMPRIME O CARACTERE NO MONITOR SERIAL
-    // Serial.print(now.minute(), DEC); //IMPRIME NO MONITOR SERIAL OS MINUTOS
-    // Serial.print(':'); //IMPRIME O CARACTERE NO MONITOR SERIAL
-    // Serial.print(now.second(), DEC); //IMPRIME NO MONITOR SERIAL OS SEGUNDOS
-    // Serial.println(); //QUEBRA DE LINHA NA SERIAL
-}
-
-void writeLetter(int letra, int dia){
-  for (int i = 0; i < 7; i++){
+void writeLetter(int letra, int dia)
+{
+  for (int i = 0; i < 7; i++)
     digitalWrite(segs[i], dias[dia][letra][i]);
-    
-  }
 }
 
-void writeDay(int dia){
+void writeDay(int dia)
+{
   digitalWrite(INH_A, HIGH);
   digitalWrite(INH_B,  LOW);
 
-  for (int i = 0; i < 3; i++){
+  for (int i = 0; i < 3; i++)
+  {
     digitalWrite(CTL_2A, (i>>0)&1);
     digitalWrite(CTL_2B, (i>>1)&1);
     writeLetter(i, dia);
@@ -100,18 +83,18 @@ void writeDay(int dia){
   }
 }
 
-void writeNumber(int n, int display){
-
+void writeNumber(int n, int display)
+{
   for (int i = 0; i < 4; i++)
     digitalWrite(outs[i], (n >> i) & 1);
 
-  for (int i = 0; i < 3; i++){
+  for (int i = 0; i < 3; i++)
     digitalWrite(displays[i], (display >> i) & 1);
-  }
   delay(DELAY);
 }
 
-void writeDate(){
+void writeDate()
+{
 
   digitalWrite(INH_A,  LOW);
   digitalWrite(INH_B, HIGH);
@@ -127,54 +110,30 @@ void writeDate(){
 
 }
 
-void setup(){
-
-  // Serial.begin(9600);
-
-  for (int i = 2; i < 13; i++){
+void setup()
+{
+  for (int i = 2; i < 13; i++)
+  {
     pinMode(i, OUTPUT);
     digitalWrite(i, LOW);
   }
 
-  digitalWrite(9, LOW);
-  digitalWrite(10,HIGH);
-
-  digitalWrite(6, 1);
-  digitalWrite(7, 0);
-  digitalWrite(8, 0);
-
-  digitalWrite(2,1);
-  digitalWrite(3,0);
-  digitalWrite(4,0);
-  digitalWrite(5,0);
-
-if (! rtc.begin()) { 
+  if (! rtc.begin()) 
+  { 
     Serial.println("DS1307 não encontrado"); 
     while(1);
   }
-  if (! rtc.isrunning()) { 
-    //Serial.println("DS1307 rodando!");
-    //REMOVA O COMENTÁRIO DE UMA DAS LINHAS ABAIXO PARA INSERIR AS INFORMAÇÕES ATUALIZADAS EM SEU RTC
-    //rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); //CAPTURA A DATA E HORA EM QUE O SKETCH É COMPILADO
-    //rtc.adjust(DateTime(2020, 7, 22, 15, 33, 15)); //(ANO), (MÊS), (DIA), (HORA), (MINUTOS), (SEGUNDOS)
-  }
+
+  //REMOVA O COMENTÁRIO DE UMA DAS LINHAS ABAIXO PARA INSERIR AS INFORMAÇÕES ATUALIZADAS EM SEU RTC
   //rtc.adjust(DateTime(2020, 7, 22, 15, 33, 15)); //(ANO), (MÊS), (DIA), (HORA), (MINUTOS), (SEGUNDOS)
   //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   now = rtc.now();
-
 }
-
-long int counter = 0;
 
 void loop() {
   now = rtc.now();
-  if (counter > 50){
-    //printDebug();
-    counter = 0;
-  }
 
   writeDate();
   writeDay(now.dayOfTheWeek());
 
-  counter++;
 }
