@@ -44,9 +44,14 @@ Um protobord serve como uma placa de prototipagem. Eles são usados normalmente 
 ## Código
 
 ### Bibliotecas Utilizadas:
-  - Wire.h
-  - RTClib.h
+  - [Wire.h](https://www.arduino.cc/en/Reference/Wire)
+  - [RTClib.h](https://github.com/adafruit/RTClib)
   
-  
+### Datasheets
+ - [Arduino Nano](ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
+ - [4511](https://www.ti.com/lit/ds/symlink/cd4511b.pdf)
+ - [4051](https://www.ti.com/lit/ds/symlink/cd4051b.pdf)
+ - [DS3132](https://datasheets.maximintegrated.com/en/ds/DS3231.pdf)
+
 ## Resultado Final
 ## Ideias e sugestões
