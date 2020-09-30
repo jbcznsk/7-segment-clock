@@ -1,5 +1,6 @@
 # 7-segment-clock
-<img src="https://i.imgur.com/oLs0pGW.jpeg" width="750">
+<!--><img src="https://i.imgur.com/oLs0pGW.jpeg" width="750"><-->
+<img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/relogio-simplificado.jpg" width="750">
 Relógio feito com Arduino Nano e Displays de 7 Segmentos.
 
 ## Objetivo
