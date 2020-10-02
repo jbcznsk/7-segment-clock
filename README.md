@@ -1,7 +1,25 @@
 # 7-segment-clock
 <!-- <img src="https://i.imgur.com/oLs0pGW.jpeg" width="750"> -->
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/relogio-simplificado.jpg" width="750">
-Relógio feito com Arduino Nano e Displays de 7 Segmentos.
+<b>Relógio feito com Arduino Nano e Displays de 7 Segmentos.</b>
+
+## Sumário
+ - [Objetivo](https://github.com/JorgeJabczenski/7-segment-clock#Objetivo)
+ - [Componentes Utilizados](https://github.com/JorgeJabczenski/7-segment-clock#componentes-utilizados)
+   - [Arduino Nano](https://github.com/JorgeJabczenski/7-segment-clock#arduino-nano)
+   - [RTC DS3231](https://github.com/JorgeJabczenski/7-segment-clock#rtc-ds3231)
+   - [Display 7-Segmentos Cátodo Comum](https://github.com/JorgeJabczenski/7-segment-clock#display-7-segmentos-c%C3%A1todo-comum)
+   - [CD4511](https://github.com/JorgeJabczenski/7-segment-clock#cd4511)
+   - [CD4051](https://github.com/JorgeJabczenski/7-segment-clock#cd4051)
+   - [Transistor NPN](https://github.com/JorgeJabczenski/7-segment-clock#transistor-npn)
+   - [Resistor](https://github.com/JorgeJabczenski/7-segment-clock#resistor)
+   - [Protoboard](https://github.com/JorgeJabczenski/7-segment-clock#protoboard)
+ - [Montagem do Circuito](https://github.com/JorgeJabczenski/7-segment-clock#montagem-do-circuito)
+ - [Código](https://github.com/JorgeJabczenski/7-segment-clock#c%C3%B3digo)
+ - [Bibliotecas Utilizadas](https://github.com/JorgeJabczenski/7-segment-clock#bibliotecas-utilizadas)
+ - [Datasheets](https://github.com/JorgeJabczenski/7-segment-clock#datasheets)
+ - [Resultado Final](https://github.com/JorgeJabczenski/7-segment-clock#resultado-final)
+ - [Ideias e sugestões](https://github.com/JorgeJabczenski/7-segment-clock#ideias-e-sugest%C3%B5es)
 
 ## Objetivo
 Após 4 meses de quarentena, eu fui olhar para os componentes eletrônicos que eu tinha sobrando no meu armário e decidi fazer algo de útil com eles. Com isso, me veio a ideia de fazer algo que fosse simples e que tivesse alguma utilidade no meu dia-a-dia, e foi daí que surgiu a idéia de fazer um relógio de parede.
@@ -84,7 +102,7 @@ Um protobord serve como uma placa de prototipagem. Eles são usados normalmente 
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/exemplo-mux.gif">
 
 
-### Bibliotecas Utilizadas:
+### Bibliotecas Utilizadas
   - [Wire.h](https://www.arduino.cc/en/Reference/Wire)
   - [RTClib.h](https://github.com/adafruit/RTClib)
   
