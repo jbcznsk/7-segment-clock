@@ -80,6 +80,9 @@ Um protobord serve como uma placa de prototipagem. Eles são usados normalmente 
 
 
 ## Código
+ - Exemplo MUX
+<img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/exemplo-mux.gif">
+
 
 ### Bibliotecas Utilizadas:
   - [Wire.h](https://www.arduino.cc/en/Reference/Wire)
