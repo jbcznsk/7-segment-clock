@@ -248,5 +248,26 @@ faça as modificações que você desejar para deixar o programa mais compacto e
  - [4051](https://www.ti.com/lit/ds/symlink/cd4051b.pdf)
  - [DS3132](https://datasheets.maximintegrated.com/en/ds/DS3231.pdf)
 
-## Resultado Final
+### Preço
+| Componente | Preço Individual| Quantidade |Preço Final |
+| -------------------------------- | ----- | - | ------- |
+| Arduino Nano                     | 44,90 | 1 | 44,90 |
+| RTC DS3231                       | 17,90 | 1 | 17,90 |
+| CD4511                           | 4,40  | 1 | 4,40  |
+| CD4051                           | 3,00  | 1 | 3,00  |
+| Transistor BC546                 | 0,30  | 4 | 1,20  |
+| Display 7-Segmentos Cátodo Comum | 1,50  | 4 | 6,00  |
+| Protoboard                       | 17,90 | 1 | 17,90 |
+|                                  |       |   | 95,30 |
+
+## Resultado Finals
+Como resultado final temos um relógio compacto e bonito e de relativamente baixo custo para um projeto DIY, se comparar-mos com os relógios que utilizam displays OLED ou LCD.
+
 ## Ideias e sugestões
+ - Adicionar um Shift-Register para fazer um design amigável para baterias
+ - Otimizar o código utilizando diretamente os registradores do ATMega328P
+ - Trocar o Arduino Nano por um Arduino Mini
+ - Leds piscando todo segundo como um relógio tradicional
+ - Adicionar alarmes
+ - Adicionar outro protoboard e mostrar a data também
+ - Mostrar o dia da semana com outro display ou com uma barra de Leds
