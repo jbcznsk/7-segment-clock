@@ -60,6 +60,16 @@ Um protobord serve como uma placa de prototipagem. Eles são usados normalmente 
 
 ## Montagem do Circuito
 ### 1º Passo
+No primeiro passo, coloque o Arduino Nano na protoboard no canto esquerdo, apenas para uma noção de espaçamento, pois como veremos, não temos muito espaço extra para trabalhar. Logo após o Arduino, coloque o CD4511 com o entalhe para esquerda e faça as seguintes conexões: 
+  - Pino 3  (LT)  -> 5V
+  - Pino 4  (BL)  -> 5V
+  - Pino 5  (LE)  -> GND
+  - Pino 8  (VSS) -> GND
+  - Pino 16 (VDD) -> 5V
+  
+Para um maior conhecimento do funcionamento do CD4511, [leia este exelente artigo](https://www.embarcados.com.br/cd4511-decodificador-display-7-segmentos/), onde é explicado em detalhes a função de cada um dos pinos.
+
+
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/1-passo.png">
 
 ### 2º Passo
@@ -271,3 +281,4 @@ Como resultado final temos um relógio compacto e bonito e de relativamente baix
  - Adicionar alarmes
  - Adicionar outro protoboard e mostrar a data também
  - Mostrar o dia da semana com outro display ou com uma barra de Leds
+ - Utilizar os pinos de BL e LE do CD4511 para implementar o circuito de uma maneira mais eficiente
