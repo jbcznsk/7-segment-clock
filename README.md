@@ -271,7 +271,7 @@ faça as modificações que você desejar para deixar o programa mais compacto e
 |                                  |       |   | 95,30 |
 
 ## Resultado Finals
-Como resultado final temos um relógio compacto e bonito e de relativamente baixo custo para um projeto DIY, se comparar-mos com os relógios que utilizam displays OLED ou LCD.
+Como resultado final temos um relógio compacto e bonito e de relativamente baixo custo para um projeto DIY, se compararmos com os relógios que utilizam displays OLED ou LCD.
 
 ## Ideias e sugestões
  - Adicionar um Shift-Register para fazer um design amigável para baterias
