@@ -68,22 +68,28 @@ No primeiro passo, coloque o Arduino Nano na protoboard no canto esquerdo, apena
   - Pino 16 (VDD) -> 5V
   
 Para um maior conhecimento do funcionamento do CD4511, [leia este exelente artigo](https://www.embarcados.com.br/cd4511-decodificador-display-7-segmentos/), onde é explicado em detalhes a função de cada um dos pinos.
-
-
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/1-passo.png">
 
 ### 2º Passo
+Agora, ligue as saídas do CD4511 ao display. O display deve ficar a 3 espaços de distância para dar espaço ao transistor que será colocado futuramente
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/2-passo.png">
 
 ### 3º Passo
+Coloque outro display diretamente ao lado do antigo e faça as mesmas conexões feitas no passo anterior
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/3-passo.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/3-passo-2.png">
 
 ### 4º Passo
+Pule mais três espaços e faça exatamente a mesma coisa, agora todos os displays devem estar interligados entre si. Para garantir que todas as conexões foram feitas corretametne, teste elas com um multímetro.
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/4-passo.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/4-passo-2.png">
 
 ### 5º Passo
+Agora ligue o GND e o 5V do Arduino nas trilhas corretas do protoboard, são essas conexões que irão energizar o resto do circuito. Depois, conecte os seguintes pinos:
+ - D2 -> A(7)
+ - D3 -> B(1)
+ - D4 -> C(2)
+ - D5 -> D(6)
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/5-passo.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/5-passo-2.png">
 
