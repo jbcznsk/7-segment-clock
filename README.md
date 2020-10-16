@@ -100,6 +100,7 @@ Agora ligue o GND e o 5V do Arduino nas trilhas corretas do protoboard, são ess
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/6-passo-4.png">
 
 ### 7º Passo
+Conecte o Mux CD4051 diretamente ao lado do display e faça as conexões básicas para que ele funcione corretamente. Para um entendimento mais completo desse CI [acesse este site](https://www.embarcados.com.br/multiplexador-cd4051/)
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/7-passo.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/7-passo-2.png">
 
