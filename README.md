@@ -277,7 +277,7 @@ faça as modificações que você desejar para deixar o programa mais compacto e
 | Protoboard                       | 17,90 | 1 | 17,90 |
 |                                  |       |   | 95,30 |
 
-## Resultado Finals
+## Resultado Final
 Como resultado final temos um relógio compacto e bonito e de relativamente baixo custo para um projeto DIY, se compararmos com os relógios que utilizam displays OLED ou LCD.
 
 ## Ideias e sugestões
