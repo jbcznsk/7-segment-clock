@@ -94,6 +94,10 @@ Agora ligue o GND e o 5V do Arduino nas trilhas corretas do protoboard, são ess
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/5-passo-2.png">
 
 ### 6º Passo
+Esse é um dos passos mais cruciais para o funcionamento do projeto, pois serão conectados os transistores que servirão de chave 'liga e desliga' dos displays. Siga com cuidado as conexões, elas farão com que a corrente siga o caminho <b> Ânodo > Cátodo > Resistor > Coletor > Emissor > GND </b> e isso ligará o display assim que for aplicada uma corrente na base do transistor correspodente, portanto, cada display terá seu transistor correspodente. O resistor utilizado foi de 330 Ohms. <br>
+
+Nos próximos passos o controle dos transistores será projetado.
+
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/6-passo.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/6-passo-2.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/6-passo-3.png">
@@ -105,15 +109,27 @@ Conecte o Mux CD4051 diretamente ao lado do display e faça as conexões básica
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/7-passo-2.png">
 
 ### 8º Passo
+Nessa parte será projetado o controle dos transistores. Como estão sendo utilizados apenas 4 displays, serão utilizadas apenas 4 saídas do mux CD4051, por consequência, apenas duas de suas entradas. Com isso temos as seguintes conexões:
+ - D6  -> A(11)
+ - D7  -> B(10)
+ - GND -> C(9) 
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/8-passo.png">
+Depois disso as saídas do mux devem ser ligadas as bases dos transistores na ordem correta de ativação. Para isso, confira o a imagem abaixo ou o datasheet do CD4051, que pode ser encontrado no final da página. Nessa imagem os  transistores foram retirados apenas para uma maior clareza, o  circuito final pode ser encontrado no final desse passo.
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/8-passo-2.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/8-passo-3.png">
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/8-passo-4.png">
- - Exemplo MUX
+ - Exemplo MUX <br>
+ Nesse exemplo pode ser visto como os displays receberão as mesmas entradas, porém só são ligados um de cada vez, mostrando apenas aquilo que é desejado. Se isso for  feito em uma velocidade rápida o suficiente essa alternação não será notada, dando uma ilusão de que cada display está sendo controlado individualmente.
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/exemplo-mux.gif">
 
 ### 9º Passo
+Por fim, deve ser conectado o coração do projeto, o RTC. Infelizmente o software utilizado para fazer os circuitos não possui nenhum RTC, portanto foi conectado um dip-switch de 4 chaves, onde cada chave represenda um pino do RTC utilizado:
+- 1 -> SDA -> A4
+- 2 -> SDL -> A5
+- 3 -> VCC -> 5V
+- 4 -> VSS -> GND
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/9-passo.png">
+Com tudo isso pronto, agora só falta programar o Arduino Nano para que ele controle corretamente as entradas dos ICs e portanto o projeto seja finalizado.
 
 
 ## Código
@@ -278,7 +294,7 @@ faça as modificações que você desejar para deixar o programa mais compacto e
 |                                  |       |   | 95,30 |
 
 ## Resultado Final
-Como resultado final temos um relógio compacto e bonito e de relativamente baixo custo para um projeto DIY, se compararmos com os relógios que utilizam displays OLED ou LCD.
+Como resultado final temos um relógio compacto e bonito e de relativamente baixo custo para um projeto DIY, se compararmos com os relógios que utilizam displays OLED ou LCD. O uso de apenas um CD4511 em conjunto com o CD4051 para multiplexar os displays foi uma decisão de projeto que leva à alguns desafios, mas no final apresenta um design compacto inteligente, com capacidade de inserir mais displays com facilidade e pouquíssimas alterações.
 
 ## Ideias e sugestões
  - Adicionar um Shift-Register para fazer um design amigável para baterias
@@ -289,3 +305,4 @@ Como resultado final temos um relógio compacto e bonito e de relativamente baix
  - Adicionar outro protoboard e mostrar a data também
  - Mostrar o dia da semana com outro display ou com uma barra de Leds
  - Utilizar os pinos de BL e LE do CD4511 para implementar o circuito de uma maneira mais eficiente
+ - Mudar para um Arduino Mini ou Micro para ter mais espaço na protoboard para adicionais mas funcionalidades.
