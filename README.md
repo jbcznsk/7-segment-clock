@@ -94,7 +94,7 @@ Agora ligue o GND e o 5V do Arduino nas trilhas corretas do protoboard, são ess
 <img src="https://github.com/JorgeJabczenski/7-segment-clock/blob/master/imgs/montagem/5-passo-2.png">
 
 ### 6º Passo
-Esse é um dos passos mais cruciais para o funcionamento do projeto, pois serão conectados os transistores que servirão de chave 'liga e desliga' dos displays. Siga com cuidado as conexões, elas farão com que a corrente siga o caminho <b> Ânodo > Cátodo > Resistor > Coletor > Emissor > GND </b> e isso ligará o display assim que for aplicada uma corrente na base do transistor correspodente, portanto, cada display terá seu transistor correspodente. O resistor utilizado foi de 330 Ohms. <br>
+Esse é um dos passos mais cruciais para o funcionamento do projeto, pois serão conectados os transistores que servirão de chave 'liga e desliga' dos displays. Siga com cuidado as conexões, elas farão com que a corrente siga o caminho <b> Ânodo > Cátodo > Resistor > Coletor > Emissor > GND </b> e isso ligará o display assim que for aplicada uma corrente na base do transistor correspodente, portanto, cada display terá seu próprio transistor. O resistor utilizado foi de 330 Ohms. <br>
 
 Nos próximos passos o controle dos transistores será projetado.
 
